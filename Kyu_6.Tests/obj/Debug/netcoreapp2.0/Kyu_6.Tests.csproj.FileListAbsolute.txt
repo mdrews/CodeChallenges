@@ -1,0 +1,16 @@
+C:\Code\CodeWars\Kyu_6.Tests\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Code\CodeWars\Kyu_6.Tests\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Code\CodeWars\Kyu_6.Tests\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+C:\Code\CodeWars\Kyu_6.Tests\bin\Debug\netcoreapp2.0\Kyu_6.Tests.deps.json
+C:\Code\CodeWars\Kyu_6.Tests\bin\Debug\netcoreapp2.0\Kyu_6.Tests.runtimeconfig.json
+C:\Code\CodeWars\Kyu_6.Tests\bin\Debug\netcoreapp2.0\Kyu_6.Tests.runtimeconfig.dev.json
+C:\Code\CodeWars\Kyu_6.Tests\bin\Debug\netcoreapp2.0\Kyu_6.Tests.dll
+C:\Code\CodeWars\Kyu_6.Tests\bin\Debug\netcoreapp2.0\Kyu_6.Tests.pdb
+C:\Code\CodeWars\Kyu_6.Tests\bin\Debug\netcoreapp2.0\Kyu_6.dll
+C:\Code\CodeWars\Kyu_6.Tests\bin\Debug\netcoreapp2.0\Kyu_6.pdb
+C:\Code\CodeWars\Kyu_6.Tests\obj\Debug\netcoreapp2.0\Kyu_6.Tests.csprojResolveAssemblyReference.cache
+C:\Code\CodeWars\Kyu_6.Tests\obj\Debug\netcoreapp2.0\Kyu_6.Tests.csproj.CoreCompileInputs.cache
+C:\Code\CodeWars\Kyu_6.Tests\obj\Debug\netcoreapp2.0\Kyu_6.Tests.AssemblyInfoInputs.cache
+C:\Code\CodeWars\Kyu_6.Tests\obj\Debug\netcoreapp2.0\Kyu_6.Tests.AssemblyInfo.cs
+C:\Code\CodeWars\Kyu_6.Tests\obj\Debug\netcoreapp2.0\Kyu_6.Tests.dll
+C:\Code\CodeWars\Kyu_6.Tests\obj\Debug\netcoreapp2.0\Kyu_6.Tests.pdb
