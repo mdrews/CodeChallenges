@@ -681,26 +681,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mdrews\\.nuget\\packages\\": {},
+    "C:\\Users\\Matthew\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Code\\Training\\CodeWars\\5_kyu\\5_kyu.csproj",
+      "projectUniqueName": "C:\\Code\\Challenge\\CodeWars\\5_kyu\\5_kyu.csproj",
       "projectName": "5_kyu",
-      "projectPath": "C:\\Code\\Training\\CodeWars\\5_kyu\\5_kyu.csproj",
-      "packagesPath": "C:\\Users\\mdrews\\.nuget\\packages\\",
-      "outputPath": "C:\\Code\\Training\\CodeWars\\5_kyu\\obj\\",
+      "projectPath": "C:\\Code\\Challenge\\CodeWars\\5_kyu\\5_kyu.csproj",
+      "packagesPath": "C:\\Users\\Matthew\\.nuget\\packages\\",
+      "outputPath": "C:\\Code\\Challenge\\CodeWars\\5_kyu\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\mdrews\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Matthew\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -726,7 +723,7 @@
         "dependencies": {
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.1.0",
+            "version": "[2.1.0, )",
             "autoReferenced": true
           }
         },

@@ -9,3 +9,14 @@ C:\Code\Training\CodeWars\5_kyu\obj\Debug\netcoreapp2.1\5_kyu.AssemblyInfoInputs
 C:\Code\Training\CodeWars\5_kyu\obj\Debug\netcoreapp2.1\5_kyu.AssemblyInfo.cs
 C:\Code\Training\CodeWars\5_kyu\obj\Debug\netcoreapp2.1\5_kyu.dll
 C:\Code\Training\CodeWars\5_kyu\obj\Debug\netcoreapp2.1\5_kyu.pdb
+C:\Code\Challenge\CodeWars\5_kyu\bin\Debug\netcoreapp2.1\5_kyu.deps.json
+C:\Code\Challenge\CodeWars\5_kyu\bin\Debug\netcoreapp2.1\5_kyu.runtimeconfig.json
+C:\Code\Challenge\CodeWars\5_kyu\bin\Debug\netcoreapp2.1\5_kyu.runtimeconfig.dev.json
+C:\Code\Challenge\CodeWars\5_kyu\bin\Debug\netcoreapp2.1\5_kyu.dll
+C:\Code\Challenge\CodeWars\5_kyu\bin\Debug\netcoreapp2.1\5_kyu.pdb
+C:\Code\Challenge\CodeWars\5_kyu\obj\Debug\netcoreapp2.1\5_kyu.csprojAssemblyReference.cache
+C:\Code\Challenge\CodeWars\5_kyu\obj\Debug\netcoreapp2.1\5_kyu.csproj.CoreCompileInputs.cache
+C:\Code\Challenge\CodeWars\5_kyu\obj\Debug\netcoreapp2.1\5_kyu.AssemblyInfoInputs.cache
+C:\Code\Challenge\CodeWars\5_kyu\obj\Debug\netcoreapp2.1\5_kyu.AssemblyInfo.cs
+C:\Code\Challenge\CodeWars\5_kyu\obj\Debug\netcoreapp2.1\5_kyu.dll
+C:\Code\Challenge\CodeWars\5_kyu\obj\Debug\netcoreapp2.1\5_kyu.pdb

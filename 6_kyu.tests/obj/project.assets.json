@@ -2816,7 +2816,7 @@
       ]
     },
     "System.Collections.Specialized/4.0.1": {
-      "sha512": "8Lz+T4uosKpXV/dtikMfoLiITCb8pBYJb8W714b3q0RGxDFgGKt/VWDTloOhi5f9yRjgK575ZSKy7xo1I0+OYA==",
+      "sha512": "/HKQyVP0yH1I0YtK7KJL/28snxHNH/bi+0lgk/+MbURF6ULhAE31MDI+NZDerNWu264YbxklXCCygISgm+HMug==",
       "type": "package",
       "path": "system.collections.specialized/4.0.1",
       "files": [
@@ -2978,7 +2978,7 @@
       ]
     },
     "System.ComponentModel.Primitives/4.1.0": {
-      "sha512": "fRk+gYFRMcGeGHDRKhZk6tcOvv7RLutsW/B/dGBwGokvWZ+TVoaJvgJN4ZGFtdjQXNqf1e82LIPKr8dlT4Zd+w==",
+      "sha512": "sc/7eVCdxPrp3ljpgTKVaQGUXiW05phNWvtv/m2kocXqrUQvTVWKou1Edas2aDjTThLPZOxPYIGNb/HN0QjURg==",
       "type": "package",
       "path": "system.componentmodel.primitives/4.1.0",
       "files": [
@@ -3015,7 +3015,7 @@
       ]
     },
     "System.ComponentModel.TypeConverter/4.1.0": {
-      "sha512": "GurfoYQ2RuyJFQEQfgY4IOChyfrMuRkLHgPLL7bjPQifNnx/Z8fViagpM02OcKIa4bWwRj0ch2yAlzxqsBproQ==",
+      "sha512": "MnDAlaeJZy9pdB5ZdOlwdxfpI+LJQ6e0hmH7d2+y2LkiD8DRJynyDYl4Xxf3fWFm7SbEwBZh4elcfzONQLOoQw==",
       "type": "package",
       "path": "system.componentmodel.typeconverter/4.1.0",
       "files": [
@@ -5727,26 +5727,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mdrews\\.nuget\\packages\\": {},
+    "C:\\Users\\Matthew\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Code\\Training\\CodeWars\\6_kyu.tests\\6_kyu.tests.csproj",
+      "projectUniqueName": "C:\\Code\\Challenge\\CodeWars\\6_kyu.tests\\6_kyu.tests.csproj",
       "projectName": "6_kyu.tests",
-      "projectPath": "C:\\Code\\Training\\CodeWars\\6_kyu.tests\\6_kyu.tests.csproj",
-      "packagesPath": "C:\\Users\\mdrews\\.nuget\\packages\\",
-      "outputPath": "C:\\Code\\Training\\CodeWars\\6_kyu.tests\\obj\\",
+      "projectPath": "C:\\Code\\Challenge\\CodeWars\\6_kyu.tests\\6_kyu.tests.csproj",
+      "packagesPath": "C:\\Users\\Matthew\\.nuget\\packages\\",
+      "outputPath": "C:\\Code\\Challenge\\CodeWars\\6_kyu.tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\mdrews\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Matthew\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5759,8 +5756,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Code\\Training\\CodeWars\\6_kyu\\6_kyu.csproj": {
-              "projectPath": "C:\\Code\\Training\\CodeWars\\6_kyu\\6_kyu.csproj"
+            "C:\\Code\\Challenge\\CodeWars\\6_kyu\\6_kyu.csproj": {
+              "projectPath": "C:\\Code\\Challenge\\CodeWars\\6_kyu\\6_kyu.csproj"
             }
           }
         }
@@ -5774,22 +5771,22 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
-          "xunit.runner.visualstudio": {
+          "Microsoft.NET.Test.Sdk": {
             "target": "Package",
-            "version": "2.3.1"
+            "version": "[15.7.0, )"
           },
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.1.0",
+            "version": "[2.1.0, )",
             "autoReferenced": true
           },
           "xunit": {
             "target": "Package",
-            "version": "2.3.1"
+            "version": "[2.3.1, )"
           },
-          "Microsoft.NET.Test.Sdk": {
+          "xunit.runner.visualstudio": {
             "target": "Package",
-            "version": "15.7.0"
+            "version": "[2.3.1, )"
           }
         },
         "imports": [
