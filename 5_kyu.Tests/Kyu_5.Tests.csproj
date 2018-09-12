@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RootNamespace>_6_kyu.tests</RootNamespace>
+    <RootNamespace>_5_kyu.Tests</RootNamespace>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\6_kyu\6_kyu.csproj" />
+    <ProjectReference Include="..\5_kyu\Kyu_5.csproj" />
   </ItemGroup>
 
 </Project>

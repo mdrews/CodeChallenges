@@ -1,0 +1,16 @@
+C:\Code\Training\Challenge\CodeWars\Kyu_4.Tests\obj\Debug\netcoreapp2.1\Kyu_4.Tests.csprojResolveAssemblyReference.cache
+C:\Code\Training\Challenge\CodeWars\Kyu_4.Tests\obj\Debug\netcoreapp2.1\Kyu_4.Tests.csproj.CoreCompileInputs.cache
+C:\Code\Training\Challenge\CodeWars\Kyu_4.Tests\obj\Debug\netcoreapp2.1\Kyu_4.Tests.AssemblyInfoInputs.cache
+C:\Code\Training\Challenge\CodeWars\Kyu_4.Tests\obj\Debug\netcoreapp2.1\Kyu_4.Tests.AssemblyInfo.cs
+C:\Code\Training\Challenge\CodeWars\Kyu_4.Tests\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Code\Training\Challenge\CodeWars\Kyu_4.Tests\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\Code\Training\Challenge\CodeWars\Kyu_4.Tests\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\Code\Training\Challenge\CodeWars\Kyu_4.Tests\bin\Debug\netcoreapp2.1\Kyu_4.Tests.deps.json
+C:\Code\Training\Challenge\CodeWars\Kyu_4.Tests\bin\Debug\netcoreapp2.1\Kyu_4.Tests.runtimeconfig.json
+C:\Code\Training\Challenge\CodeWars\Kyu_4.Tests\bin\Debug\netcoreapp2.1\Kyu_4.Tests.runtimeconfig.dev.json
+C:\Code\Training\Challenge\CodeWars\Kyu_4.Tests\bin\Debug\netcoreapp2.1\Kyu_4.Tests.dll
+C:\Code\Training\Challenge\CodeWars\Kyu_4.Tests\bin\Debug\netcoreapp2.1\Kyu_4.Tests.pdb
+C:\Code\Training\Challenge\CodeWars\Kyu_4.Tests\bin\Debug\netcoreapp2.1\Kyu_4.dll
+C:\Code\Training\Challenge\CodeWars\Kyu_4.Tests\bin\Debug\netcoreapp2.1\Kyu_4.pdb
+C:\Code\Training\Challenge\CodeWars\Kyu_4.Tests\obj\Debug\netcoreapp2.1\Kyu_4.Tests.dll
+C:\Code\Training\Challenge\CodeWars\Kyu_4.Tests\obj\Debug\netcoreapp2.1\Kyu_4.Tests.pdb

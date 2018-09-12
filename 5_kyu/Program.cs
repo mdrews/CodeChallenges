@@ -9,4 +9,4 @@ namespace _5_kyu
             Console.WriteLine("Hello World!");
         }
     }
-}
+} 
