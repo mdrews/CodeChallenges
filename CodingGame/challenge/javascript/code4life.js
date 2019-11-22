@@ -50,6 +50,7 @@ while (true) {
         const costD = parseInt(inputs[8]);
         const costE = parseInt(inputs[9]);
     }
+    console.log('test');
 
     // Write an action using console.log()
     // To debug: console.error('Debug messages...');
