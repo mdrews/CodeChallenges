@@ -1,7 +1,7 @@
 /**
  * Bring data on patient samples from the diagnosis machine to the laboratory with enough molecules to produce medicine!
  **/
-
+var location = -1;
 const projectCount = parseInt(readline());
 for (let i = 0; i < projectCount; i++) {
     var inputs = readline().split(' ');
@@ -15,6 +15,18 @@ for (let i = 0; i < projectCount; i++) {
 const commands = {
   diagnosis: "GOTO DIAGNOSIS",
   connect: "CONNECT"
+}
+
+const doAction = (state) => {
+  switch(location) {
+    case 0:
+      console.log('CONNECT 5');
+      location++;
+    default:
+      console.log('GOTO DIAGNOSIS');
+      location++;
+      break;
+  }
 }
 
 // game loop
@@ -45,7 +57,6 @@ while (true) {
           }]}
     }
     console.error(state);
-
-    console.log(commands.diagnosis);
+    doAction();
     //console.log(commands.connect);
 }
