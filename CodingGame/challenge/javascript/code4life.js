@@ -14,21 +14,15 @@ for (let i = 0; i < projectCount; i++) {
 
 // game loop
 while (true) {
+  var state = {};
     for (let i = 0; i < 2; i++) {
         var inputs = readline().split(' ');
-        const target = inputs[0];
-        const eta = parseInt(inputs[1]);
-        const score = parseInt(inputs[2]);
-        const storageA = parseInt(inputs[3]);
-        const storageB = parseInt(inputs[4]);
-        const storageC = parseInt(inputs[5]);
-        const storageD = parseInt(inputs[6]);
-        const storageE = parseInt(inputs[7]);
-        const expertiseA = parseInt(inputs[8]);
-        const expertiseB = parseInt(inputs[9]);
-        const expertiseC = parseInt(inputs[10]);
-        const expertiseD = parseInt(inputs[11]);
-        const expertiseE = parseInt(inputs[12]);
+        state = {
+          target: inputs[0],
+          eta: parseInt(inputs[1]),
+          score: parseInt(inputs[2]),
+          storage: [parseInt(inputs[3]), parseInt(inputs[4]), parseInt(inputs[5]), parseInt(inputs[6]), parseInt(inputs[7])],
+          expertise: [parseInt(inputs[8]), parseInt(inputs[9]), parseInt(inputs[10]), parseInt(inputs[11]), parseInt(inputs[12])]};
     }
     var inputs = readline().split(' ');
     const availableA = parseInt(inputs[0]);
@@ -50,7 +44,7 @@ while (true) {
         const costD = parseInt(inputs[8]);
         const costE = parseInt(inputs[9]);
     }
-    console.log('test');
+    console.error(state);
 
     // Write an action using console.log()
     // To debug: console.error('Debug messages...');
