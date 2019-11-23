@@ -12,6 +12,11 @@ for (let i = 0; i < projectCount; i++) {
     const e = parseInt(inputs[4]);
 }
 
+const commands = {
+  diagnosis: "GOTO DIAGNOSIS",
+  connect: "CONNECT"
+}
+
 // game loop
 while (true) {
   var state = {};
@@ -27,23 +32,20 @@ while (true) {
     var inputs = readline().split(' ');
     state = {...state, available: [parseInt(inputs[0]), parseInt(inputs[1]), parseInt(inputs[2]), parseInt(inputs[3]), parseInt(inputs[4])] }
     const sampleCount = parseInt(readline());
+    state = {...state, samples: []};
     for (let i = 0; i < sampleCount; i++) {
         var inputs = readline().split(' ');
-        const sampleId = parseInt(inputs[0]);
-        const carriedBy = parseInt(inputs[1]);
-        const rank = parseInt(inputs[2]);
-        const expertiseGain = inputs[3];
-        const health = parseInt(inputs[4]);
-        const costA = parseInt(inputs[5]);
-        const costB = parseInt(inputs[6]);
-        const costC = parseInt(inputs[7]);
-        const costD = parseInt(inputs[8]);
-        const costE = parseInt(inputs[9]);
+        state = {...state, samples: [...state.samples, 
+          { sampleID: parseInt(inputs[0]),
+            carriedBy: parseInt(inputs[1]),
+            rank: parseInt(inputs[2]),
+            //expertiseGain = inputs[3],
+            health: parseInt(inputs[4]),
+            cost: [parseInt(inputs[5]), parseInt(inputs[6]), parseInt(inputs[7]), parseInt(inputs[8]), parseInt(inputs[9])]
+          }]}
     }
     console.error(state);
 
-    // Write an action using console.log()
-    // To debug: console.error('Debug messages...');
-
-    console.log('GOTO DIAGNOSIS');
+    console.log(commands.diagnosis);
+    //console.log(commands.connect);
 }
