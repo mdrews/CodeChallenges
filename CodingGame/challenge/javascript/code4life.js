@@ -25,11 +25,7 @@ while (true) {
           expertise: [parseInt(inputs[8]), parseInt(inputs[9]), parseInt(inputs[10]), parseInt(inputs[11]), parseInt(inputs[12])]};
     }
     var inputs = readline().split(' ');
-    const availableA = parseInt(inputs[0]);
-    const availableB = parseInt(inputs[1]);
-    const availableC = parseInt(inputs[2]);
-    const availableD = parseInt(inputs[3]);
-    const availableE = parseInt(inputs[4]);
+    state = {...state, available: [parseInt(inputs[0]), parseInt(inputs[1]), parseInt(inputs[2]), parseInt(inputs[3]), parseInt(inputs[4])] }
     const sampleCount = parseInt(readline());
     for (let i = 0; i < sampleCount; i++) {
         var inputs = readline().split(' ');
