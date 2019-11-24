@@ -1,8 +1,12 @@
 /**
  * Bring data on patient samples from the diagnosis machine to the laboratory with enough molecules to produce medicine!
  **/
+const MAX_SAMPLES = 3;
+
 var location = -1;
 var currentSample = {}
+var sampleCount = 0;
+
 const projectCount = parseInt(readline());
 for (let i = 0; i < projectCount; i++) {
     var inputs = readline().split(' ');
@@ -39,10 +43,11 @@ const getMolecules = () => {
 const doAction = (state) => {
   switch(location) {
     case 0:
-      console.log('CONNECT 3');
-      break;
-    case 1:
-      console.log('GOTO DIAGNOSIS');
+      if(sampleCount++ < MAX_SAMPLES) {
+        console.log('CONNECT 3');
+      } else {
+        console.log('GOTO DIAGNOSIS');
+      }
       break;
     case 2:
       pickSample(state.samples);
