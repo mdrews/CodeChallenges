@@ -19,7 +19,9 @@ const commands = {
 
 const pickSample = samples => {
   const availableSamples = samples.filter(sample => sample.carriedBy == -1);
-  availableSamples.sort(sample => sample.health);
+  availableSamples.sort((sampleA, sampleB) => sampleB.health - sampleA.health);
+  console.error('--test--');
+  console.error(availableSamples);
   return(availableSamples[0]);
 }
 
@@ -28,12 +30,19 @@ const doAction = (state) => {
     case 0:
       //console.error(state);
       const sample = pickSample(state.samples);
-      console.log('CONNECT ' + sample.id);
+      console.error(sample);
+      console.log('CONNECT ' + sample.sampleID);
       location++;
       break;
+    case 1:
+      console.log('GOTO MOLECULES');
+      location++;
+      break;
+    case 2:
+
     default:
       console.log('GOTO DIAGNOSIS');
-      location++;
+      location = 0;
       break;
   }
 }
