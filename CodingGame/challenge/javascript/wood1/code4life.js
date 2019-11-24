@@ -2,10 +2,16 @@
  * Bring data on patient samples from the diagnosis machine to the laboratory with enough molecules to produce medicine!
  **/
 const MAX_SAMPLES = 3;
+const SAMPLES = 'SAMPLES';
+const DIAGNOSIS = 'DIAGNOSIS';
+const MOLECULES = 'MOLECULES';
+const LABORATORY = 'LABORATORY';
 
-var location = -1;
-var currentSample = {}
+var currentLocation = 'START';
+var currentSample = {};
+var mySamples = [];
 var sampleCount = 0;
+var diagnosedSamples = 0;
 
 const projectCount = parseInt(readline());
 for (let i = 0; i < projectCount; i++) {
@@ -41,23 +47,24 @@ const getMolecules = () => {
 }
 
 const doAction = (state) => {
-  switch(location) {
-    case 0:
+  switch(currentLocation) {
+    case SAMPLES:
       if(sampleCount++ < MAX_SAMPLES) {
         console.log('CONNECT 3');
       } else {
+        mySamples = state.samples.filter(sample => sample.carriedBy == 0);
         console.log('GOTO DIAGNOSIS');
       }
       break;
-    case 2:
-      pickSample(state.samples);
-      console.log(`CONNECT ${currentSample.sampleID}`);
-      location++;
+    case DIAGNOSIS:
+      if(diagnosedSamples < 3) {
+        console.log(`CONNECT ${mySamples[diagnosedSamples++].sampleID}`);
+      } else {
+        console.log('GOTO MOLECULES');
+        currentLocation = MOLECULES;
+      }
       break;
-    case 2:
-      console.log('GOTO MOLECULES');
-      location++;
-      break;
+    case MOLECULES:
     case 3:
       getMolecules();
       break;
@@ -67,7 +74,7 @@ const doAction = (state) => {
       break;
     default:
       console.log('GOTO SAMPLES');
-      location = 0;
+      currentLocation = SAMPLES;
       break;
   }
 }
