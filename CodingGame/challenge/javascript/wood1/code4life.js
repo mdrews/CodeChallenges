@@ -13,11 +13,10 @@ for (let i = 0; i < projectCount; i++) {
     const e = parseInt(inputs[4]);
 }
 
-const pickSample = samples => {
-  const availableSamples = samples.filter(sample => sample.carriedBy == -1);
+const pickSample = () => {
+  const availableSamples = state.samples.filter(sample => sample.carriedBy == -1);
   availableSamples.sort((sampleA, sampleB) => sampleB.health - sampleA.health);
   currentSample = availableSamples[0];
-  return(availableSamples[0]);
 }
 
 const getMolecules = () => {
@@ -40,24 +39,29 @@ const getMolecules = () => {
 const doAction = (state) => {
   switch(location) {
     case 0:
-      //console.error(state);
-      const sample = pickSample(state.samples);
+      console.log('CONNECT 3');
+      break;
+    case 1:
+      console.log('GOTO DIAGNOSIS');
+      break;
+    case 2:
+      pickSample(state.samples);
       console.log(`CONNECT ${currentSample.sampleID}`);
       location++;
       break;
-    case 1:
+    case 2:
       console.log('GOTO MOLECULES');
       location++;
       break;
-    case 2:
+    case 3:
       getMolecules();
       break;
-    case 3:
+    case 4:
       console.log(`CONNECT ${currentSample.sampleID}`);
       location++;
       break;
     default:
-      console.log('GOTO DIAGNOSIS');
+      console.log('GOTO SAMPLES');
       location = 0;
       break;
   }
@@ -90,11 +94,13 @@ while (true) {
             rank: parseInt(inputs[2]),
             //expertiseGain = inputs[3],
             health: parseInt(inputs[4]),
-            cost: [parseInt(inputs[5]), parseInt(inputs[6]), parseInt(inputs[7]), parseInt(inputs[8]), parseInt(inputs[9])]
+            cost: [parseInt(inputs[5]), parseInt(inputs[6]), parseInt(inputs[7]), parseInt(inputs[8]), parseInt(inputs[9])],
+            totalCost: parseInt(inputs[5]) + parseInt(inputs[6]) + parseInt(inputs[7]) + parseInt(inputs[8]) + parseInt(inputs[9])
           }]}
     }
-    console.error(currentSample);
-    console.error(`location: ${location}`);
-    console.error(state.player);
+    console.error(state);
+    // console.error(currentSample);
+    // console.error(`location: ${location}`);
+    // console.error(state.player);
     doAction(state);
 }
