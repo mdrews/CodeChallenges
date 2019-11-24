@@ -33,6 +33,7 @@ const getMolecules = () => {
     console.log('CONNECT E');
   } else {
     location++;
+    console.log('GOTO LABORATORY');
   }
 }
 
@@ -41,7 +42,7 @@ const doAction = (state) => {
     case 0:
       //console.error(state);
       const sample = pickSample(state.samples);
-      console.log('CONNECT ' + sample.sampleID);
+      console.log(`CONNECT ${currentSample.sampleID}`);
       location++;
       break;
     case 1:
@@ -50,6 +51,10 @@ const doAction = (state) => {
       break;
     case 2:
       getMolecules();
+      break;
+    case 3:
+      console.log(`CONNECT ${currentSample.sampleID}`);
+      location++;
       break;
     default:
       console.log('GOTO DIAGNOSIS');
@@ -88,7 +93,8 @@ while (true) {
             cost: [parseInt(inputs[5]), parseInt(inputs[6]), parseInt(inputs[7]), parseInt(inputs[8]), parseInt(inputs[9])]
           }]}
     }
-    console.error(location);
+    console.error(currentSample);
+    console.error(`location: ${location}`);
     console.error(state.player);
     doAction(state);
 }
