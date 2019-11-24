@@ -13,11 +13,6 @@ for (let i = 0; i < projectCount; i++) {
     const e = parseInt(inputs[4]);
 }
 
-const commands = {
-  diagnosis: "GOTO DIAGNOSIS",
-  connect: "CONNECT"
-}
-
 const pickSample = samples => {
   const availableSamples = samples.filter(sample => sample.carriedBy == -1);
   availableSamples.sort((sampleA, sampleB) => sampleB.health - sampleA.health);
@@ -26,15 +21,15 @@ const pickSample = samples => {
 }
 
 const getMolecules = () => {
-  if(currentSample.cost[0] > state.storage[0]) {
+  if(currentSample.cost[0] > state.player.storage[0]) {
     console.log('CONNECT A');
-  } else if(currentSample.cost[1] > state.storage[1]) {
+  } else if(currentSample.cost[1] > state.player.storage[1]) {
     console.log('CONNECT B');
-  } else if(currentSample.cost[2] > state.storage[2]) {
+  } else if(currentSample.cost[2] > state.player.storage[2]) {
     console.log('CONNECT C');
-  } else if(currentSample.cost[3] > state.storage[3]) {
+  } else if(currentSample.cost[3] > state.player.storage[3]) {
     console.log('CONNECT D');
-  } else if(currentSample.cost[4] > state.storage[4]) {
+  } else if(currentSample.cost[4] > state.player.storage[4]) {
     console.log('CONNECT E');
   } else {
     location++;
@@ -46,7 +41,6 @@ const doAction = (state) => {
     case 0:
       //console.error(state);
       const sample = pickSample(state.samples);
-      console.error(sample);
       console.log('CONNECT ' + sample.sampleID);
       location++;
       break;
@@ -69,13 +63,16 @@ while (true) {
   var state = {};
     for (let i = 0; i < 2; i++) {
         var inputs = readline().split(' ');
-        state = {
+        player = i === 0 ? 'player' : 'computer';
+        state = {...state, 
+          [player]: {
           target: inputs[0],
           eta: parseInt(inputs[1]),
           score: parseInt(inputs[2]),
           storage: [parseInt(inputs[3]), parseInt(inputs[4]), parseInt(inputs[5]), parseInt(inputs[6]), parseInt(inputs[7])],
-          expertise: [parseInt(inputs[8]), parseInt(inputs[9]), parseInt(inputs[10]), parseInt(inputs[11]), parseInt(inputs[12])]};
-    }
+          expertise: [parseInt(inputs[8]), parseInt(inputs[9]), parseInt(inputs[10]), parseInt(inputs[11]), parseInt(inputs[12])]}
+        };
+      }
     var inputs = readline().split(' ');
     state = {...state, available: [parseInt(inputs[0]), parseInt(inputs[1]), parseInt(inputs[2]), parseInt(inputs[3]), parseInt(inputs[4])] }
     const sampleCount = parseInt(readline());
@@ -91,7 +88,7 @@ while (true) {
             cost: [parseInt(inputs[5]), parseInt(inputs[6]), parseInt(inputs[7]), parseInt(inputs[8]), parseInt(inputs[9])]
           }]}
     }
-    console.error(state);
+    console.error(location);
+    console.error(state.player);
     doAction(state);
-    //console.log(commands.connect);
 }
