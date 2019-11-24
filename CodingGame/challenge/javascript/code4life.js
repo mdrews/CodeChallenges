@@ -17,11 +17,20 @@ const commands = {
   connect: "CONNECT"
 }
 
+const pickSample = samples => {
+  const availableSamples = samples.filter(sample => sample.carriedBy == -1);
+  availableSamples.sort(sample => sample.health);
+  return(availableSamples[0]);
+}
+
 const doAction = (state) => {
   switch(location) {
     case 0:
-      console.log('CONNECT 5');
+      //console.error(state);
+      const sample = pickSample(state.samples);
+      console.log('CONNECT ' + sample.id);
       location++;
+      break;
     default:
       console.log('GOTO DIAGNOSIS');
       location++;
@@ -57,6 +66,6 @@ while (true) {
           }]}
     }
     console.error(state);
-    doAction();
+    doAction(state);
     //console.log(commands.connect);
 }
