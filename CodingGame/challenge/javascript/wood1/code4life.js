@@ -12,6 +12,7 @@ var currentSample = {};
 var mySamples = [];
 var sampleCount = 0;
 var diagnosedSamples = 0;
+var labConnected = false;
 
 const projectCount = parseInt(readline());
 for (let i = 0; i < projectCount; i++) {
@@ -21,6 +22,11 @@ for (let i = 0; i < projectCount; i++) {
     const c = parseInt(inputs[2]);
     const d = parseInt(inputs[3]);
     const e = parseInt(inputs[4]);
+}
+
+const moveBot = location => {
+  currentLocation = location;
+  console.log(`GOTO ${location}`);
 }
 
 const pickSample = () => {
@@ -76,13 +82,16 @@ const doAction = (state) => {
       getMolecules();
       break;
     case LABORATORY:
-      console.log(`CONNECT ${mySamples[0].sampleID}`);
-      if(mySamples.length > 0) {
-        currentLocation = MOLECULES;
-        console.log('GOTO MOLECULES');
+      if(labConnected == false) {
+        console.log(`CONNECT ${mySamples[0].sampleID}`);
+        labConnected = true;
       } else {
-        currentLocation = SAMPLES;
-        console.log('GOTO SAMPLES');
+        labConnected = false;
+        if(mySamples.length > 0) {
+          moveBot(MOLECULES);
+        } else {
+          moveBot(SAMPLES);
+        }
       }
       break;
     default:
