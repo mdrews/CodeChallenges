@@ -63,7 +63,8 @@ const getMolecules = () => {
 const doAction = (state) => {
   switch(currentLocation) {
     case SAMPLES:
-      if(sampleCount++ < MAX_SAMPLES) {
+      if(sampleCount < MAX_SAMPLES) {
+        sampleCount = sampleCount + 1;
         console.log('CONNECT 2');
       } else {
         console.log('GOTO DIAGNOSIS');
@@ -71,7 +72,8 @@ const doAction = (state) => {
       }
       break;
     case DIAGNOSIS:
-      if(diagnosedSamples++ < 3) {
+      if(diagnosedSamples < 3) {
+        diagnosedSamples = diagnosedSamples + 1;
         console.log(`CONNECT ${mySamples[0].sampleID}`);
       } else {
         currentLocation = MOLECULES;
@@ -83,8 +85,10 @@ const doAction = (state) => {
       break;
     case LABORATORY:
       if(labConnected == false) {
-        console.log(`CONNECT ${mySamples[0].sampleID}`);
+        sampleCount = sampleCount - 1;
+        diagnosedSamples = diagnosedSamples - 1;
         labConnected = true;
+        console.log(`CONNECT ${mySamples[0].sampleID}`);
       } else {
         labConnected = false;
         if(mySamples.length > 0) {
@@ -137,8 +141,8 @@ while (true) {
       .filter(sample => sample.carriedBy === 0)
       .sort((sampleA, sampleB) => sampleA.totalCost - sampleB.totalCost);
     
-    // console.error(state);
-    console.error(mySamples);
+    console.error(`sample count: ${sampleCount}`);
+    console.error(state);
 
     doAction(state);
 }
