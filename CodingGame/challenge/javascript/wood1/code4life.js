@@ -30,18 +30,26 @@ const pickSample = () => {
 }
 
 const getMolecules = () => {
-  if(currentSample.cost[0] > state.player.storage[0]) {
+  console.error(mySamples[0].cost);
+  console.error(state.player.storage);
+  if(state.player.storage[0] < parseInt(mySamples[0].cost[0])) {
+    console.error(`${state.player.storage[0]} < ${mySamples[0].cost[0]}`);
     console.log('CONNECT A');
-  } else if(currentSample.cost[1] > state.player.storage[1]) {
+  } else if(state.player.storage[1] < parseInt(mySamples[0].cost[1])) {
+    console.error(`${state.player.storage[0]} < ${mySamples[0].cost[0]}`);
     console.log('CONNECT B');
-  } else if(currentSample.cost[2] > state.player.storage[2]) {
+  } else if(state.player.storage[2] < parseInt(mySamples[0].cost[2])) {
+    console.error(`${state.player.storage[0]} < ${mySamples[0].cost[0]}`);
     console.log('CONNECT C');
-  } else if(currentSample.cost[3] > state.player.storage[3]) {
+  } else if(state.player.storage[3] < parseInt(mySamples[0].cost[3])) {
+    console.error(`${state.player.storage[0]} < ${mySamples[0].cost[0]}`);
     console.log('CONNECT D');
-  } else if(currentSample.cost[4] > state.player.storage[4]) {
+  } else if(state.player.storage[4] < parseInt(mySamples[0].cost[4])) {
+    console.error(`${state.player.storage[0]} < ${mySamples[0].cost[0]}`);
     console.log('CONNECT E');
   } else {
-    location++;
+    console.error('===TO LAB===');
+    currentLocation = LABORATORY;
     console.log('GOTO LABORATORY');
   }
 }
@@ -50,27 +58,32 @@ const doAction = (state) => {
   switch(currentLocation) {
     case SAMPLES:
       if(sampleCount++ < MAX_SAMPLES) {
-        console.log('CONNECT 3');
+        console.log('CONNECT 2');
       } else {
-        mySamples = state.samples.filter(sample => sample.carriedBy == 0);
         console.log('GOTO DIAGNOSIS');
+        currentLocation = DIAGNOSIS;
       }
       break;
     case DIAGNOSIS:
-      if(diagnosedSamples < 3) {
-        console.log(`CONNECT ${mySamples[diagnosedSamples++].sampleID}`);
+      if(diagnosedSamples++ < 3) {
+        console.log(`CONNECT ${mySamples[0].sampleID}`);
       } else {
-        console.log('GOTO MOLECULES');
         currentLocation = MOLECULES;
+        console.log('GOTO MOLECULES');
       }
       break;
     case MOLECULES:
-    case 3:
       getMolecules();
       break;
-    case 4:
-      console.log(`CONNECT ${currentSample.sampleID}`);
-      location++;
+    case LABORATORY:
+      console.log(`CONNECT ${mySamples[0].sampleID}`);
+      if(mySamples.length > 0) {
+        currentLocation = MOLECULES;
+        console.log('GOTO MOLECULES');
+      } else {
+        currentLocation = SAMPLES;
+        console.log('GOTO SAMPLES');
+      }
       break;
     default:
       console.log('GOTO SAMPLES');
@@ -110,9 +123,13 @@ while (true) {
             totalCost: parseInt(inputs[5]) + parseInt(inputs[6]) + parseInt(inputs[7]) + parseInt(inputs[8]) + parseInt(inputs[9])
           }]}
     }
-    console.error(state);
-    // console.error(currentSample);
-    // console.error(`location: ${location}`);
-    // console.error(state.player);
+
+    mySamples = state.samples
+      .filter(sample => sample.carriedBy === 0)
+      .sort((sampleA, sampleB) => sampleA.totalCost - sampleB.totalCost);
+    
+    // console.error(state);
+    console.error(mySamples);
+
     doAction(state);
 }
