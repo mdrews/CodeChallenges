@@ -40,7 +40,6 @@ const getMolecules = () => {
 const doAction = (state) => {
   switch(location) {
     case 0:
-      //console.error(state);
       const sample = pickSample(state.samples);
       console.log(`CONNECT ${currentSample.sampleID}`);
       location++;
