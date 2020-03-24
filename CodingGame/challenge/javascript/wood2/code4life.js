@@ -19,7 +19,7 @@ const pickSample = samples => {
   currentSample = availableSamples[0];
   return(availableSamples[0]);
 }
-
+""
 const getMolecules = () => {
   if(currentSample.cost[0] > state.player.storage[0]) {
     console.log('CONNECT A');
@@ -49,6 +49,7 @@ const doAction = (state) => {
       location++;
       break;
     case 2:
+      console.log('GET MOLECULES');
       getMolecules();
       break;
     case 3:
