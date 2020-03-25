@@ -38,6 +38,7 @@ const getMolecules = () => {
 }
 
 const doAction = (state) => {
+  console.log('REDUCER');
   switch(location) {
     case 0:
       const sample = pickSample(state.samples);
