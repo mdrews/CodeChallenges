@@ -23,3 +23,9 @@ describe('test case 4', () => {
         return null;
     });
 });
+
+describe('test case 5', () => {
+    it('should return correct result', () => {
+        return null;
+    });
+});
