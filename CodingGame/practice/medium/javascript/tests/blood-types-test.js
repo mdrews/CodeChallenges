@@ -49,3 +49,74 @@ describe('Child Blood Types', () => {
       expect(bloodTypes(input)).toEqual(output);
   });
 });
+
+describe('Parents blood types', () => {
+  test('it should return defined output given the input', () => {
+    const input = `
+      31
+      ? O- B-
+      A+ ? O-
+      A- ? B+
+      O+ ? A+
+      A+ ? O+
+      AB+ ? B+
+      ? A+ A-
+      AB+ ? B-
+      ? AB+ AB-
+      ? AB+ AB+
+      O+ ? AB+
+      AB- ? B+
+      ? AB+ B-
+      AB- ? A-
+      ? O+ O-
+      ? AB+ B+
+      ? A+ B+
+      ? O- A+
+      B- ? AB+
+      ? O- A-
+      O+ ? A-
+      B- ? AB-
+      A- ? A-
+      ? O- AB+
+      ? B+ O+
+      AB+ ? A-
+      ? A+ B-
+      ? B+ O-
+      AB- ? B-
+      B- ? O-
+      ? AB+ A-`;
+const output = `
+      AB+ AB- B+ B-
+      A+ A- B+ B- O+ O-
+      AB+ B+
+      A+ A- AB+ AB-
+      A+ A- B+ B- O+ O-
+      A+ A- AB+ AB- B+ B- O+ O-
+      A+ A- AB+ AB- B+ B- O+ O-
+      A+ A- AB+ AB- B+ B- O+ O-
+      A+ A- AB+ AB- B+ B-
+      A+ A- AB+ AB- B+ B-
+      impossible
+      A+ AB+ B+ O+
+      A+ A- AB+ AB- B+ B- O+ O-
+      A+ A- AB+ AB- B+ B- O+ O-
+      A+ A- B+ B- O+ O-
+      A+ A- AB+ AB- B+ B- O+ O-
+      AB+ AB- B+ B-
+      A+ AB+
+      A+ AB+
+      A+ A- AB+ AB-
+      A+ A- AB+ AB-
+      A+ A- AB+ AB-
+      A+ A- AB+ AB- B+ B- O+ O-
+      impossible
+      A+ A- B+ B- O+ O-
+      A+ A- AB+ AB- B+ B- O+ O-
+      AB+ AB- B+ B-
+      A+ A- B+ B- O+ O-
+      A+ A- AB+ AB- B+ B- O+ O-
+      A+ A- B+ B- O+ O-
+      A+ A- AB+ AB- B+ B- O+ O-`;
+      expect(bloodTypes(input).toEqual(output));
+  });
+});
