@@ -1,4 +1,4 @@
-// test cases
+// test cases for blood-types
 const bloodTypes = require('../blood-types');
 
 describe('Example', () => {
