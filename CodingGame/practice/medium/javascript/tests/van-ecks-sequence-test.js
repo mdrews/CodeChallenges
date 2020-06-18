@@ -9,3 +9,13 @@ describe('Not Seen', () => {
     expect(vanEcks(input).toEqual(output));
   });
 });
+
+describe('Not Seen', () => {
+  it('should return output given input', () => {
+    input = `
+    0
+    3`;
+    output = `1`;
+    expect(vanEcks(input).toEqual(output));
+  });
+});
