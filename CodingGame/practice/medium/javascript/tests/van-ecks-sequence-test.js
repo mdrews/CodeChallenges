@@ -17,3 +17,12 @@ describe('Seen Before', () => {
     expect(vanEcks(A1, N).toEqual(output));
   });
 });
+
+describe('A Little Long', () => {
+  it('should return output given input', () => {
+    let A1 = 1;
+    let N = 58;
+    let output = 11
+    expect(vanEcks(A1, N).toEqual(output));
+  });
+});
