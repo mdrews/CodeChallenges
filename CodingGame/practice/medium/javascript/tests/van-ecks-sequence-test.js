@@ -10,7 +10,7 @@ describe('Not Seen', () => {
   });
 });
 
-describe('Not Seen', () => {
+describe('Seen Before', () => {
   it('should return output given input', () => {
     input = `
     0
