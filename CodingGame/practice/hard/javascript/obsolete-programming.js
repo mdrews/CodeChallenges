@@ -71,10 +71,9 @@ for (let i = 0; i < N; i++) {
   stack = [];
   parseLine.forEach(instruction => {
       if(isNaN(instruction)) {
-          stack = evaluateOperation(instruction, stack);
-          
-      } else {
           stack.push(parseInt(instruction));
+      } else {
+        stack = evaluateOperation(instruction, stack);
       }
   })
 }
